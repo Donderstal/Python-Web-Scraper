@@ -15,12 +15,11 @@ Back-up: Three weeks ( April 1 )
 Python 3 & Beautiful Soup for web scraping and sorting scraped data
 Possibly Svelte 3 for front-end
 
-#### SCRAPING TARGETS
+#### TO DO
 * [Interveste](http://interveste.nl)
 * [Camelot](https://nl.cameloteurope.com)
 * [Gapph](https://gapph.nl/)
 * [Ad Hoc](https://www.adhocbeheer.nl/)
-* [VPS](https://vps-nl.com)
 * [Villex](https://www.villex.nl/)
 * [Rochdale](https://www.rochdale.nl/)
 * [Alvast](https://alvast.nl/)
@@ -28,3 +27,7 @@ Possibly Svelte 3 for front-end
 * [Zwerfkei](https://zwerfkeibeheer.nl/)
 * [OAK management](https://www.oakmanagement.nl/woonruimte/)
 * [Vastgoedbeschermer](https://vastgoedbeschermer.nl/)
+
+#### DONE
+* [Interveste](http://interveste.nl)
+* [VPS](https://vps-nl.com)
