@@ -1,7 +1,9 @@
 from bs4 import BeautifulSoup
 from urllib.request import urlopen
 
-def scrape( ) :
+corp = "Interveste"
+
+def scrape( Data ) :
     Interveste_Tijdelijk = BeautifulSoup( urlopen('http://interveste.nl/woonruimte/tijdelijk-huren').read())
     Interveste_Antikraak = BeautifulSoup( urlopen('http://interveste.nl/woonruimte/antikraak').read())
 
@@ -13,14 +15,24 @@ def scrape( ) :
     Int_Tdl_Aanbod = Interveste_Tijdelijk.findAll("div", { "class": "aanbod-frame" })
     Int_Ant_Aanbod = Interveste_Antikraak.findAll("div", { "class": "aanbod-frame" })
 
-    for elements in Int_Tdl_Aanbod :
-        Lokatie = elements.find("h2", { "class": "aanbod-blok" }).getText()
-        Prijs   = elements.find("div", { "class": "ribbon" }).getText()
-        Url     = elements.find("a", { "class": "aspect" })['href']
-        print(Lokatie, Prijs, Url)
+    for htmlEl in Int_Tdl_Aanbod :
+        pushIntervesteAd( htmlEl, "T", Data )
  
-    for elements in Int_Ant_Aanbod :
-        Lokatie = elements.find("h2", { "class": "aanbod-blok" }).getText()
-        Prijs   = elements.find("div", { "class": "ribbon" }).getText()
-        Url     = elements.find("a", { "class": "aspect" })['href']
-        print(Lokatie, Prijs, Url)
+    for htmlEl in Int_Ant_Aanbod :
+        pushIntervesteAd( htmlEl, "A", Data )
+
+def pushIntervesteAd( htmlEl, Type, Data ) :
+        ad  = {
+            "price"   : htmlEl.find( "div", { "class": "ribbon" } ).find( "span" ).getText(),
+            "url"     : htmlEl.find( "a", { "class": "aspect" } )['href'],
+            "corp"    : corp
+        }
+
+        htmlEl.find( "h2", { "class": "aanbod-blok" } ).find( "br" ).decompose()
+        htmlEl.find( "h2", { "class": "aanbod-blok" } ).find( "span" ).decompose()
+        ad["city"]    : htmlEl.find( "h2", { "class": "aanbod-blok" } ).getText()
+
+        htmlEl.find( "h2", { "class": "aanbod-blok" } ).decompose()
+        ad["title"] = htmlEl.find( "div", { "class": "aanbod-frame-content" } ).getText()
+
+        Data.PushAd( ad, type )
