@@ -1,13 +1,16 @@
 import sys
 import scrapers
+import scraperHelper as util
 import scrapedData
 
 Data = scrapedData.DataClass()
-scrapers.scrapeAll()
-Wormerveer = {
-    "Title": "Mooi huis in wormerveer"
-}
-Data.PushCity( Wormerveer )
+scrapers.scrapeAll( Data )
+
+for City in Data.Data["Antikraak"] :
+    for key, value in City.items() :
+        City[key] = util.getCleanString( value )
+
+print(Data.Data)
 
 # How do we want to receive our structured data?
 # We might want to render it in a webpage or email
