@@ -16,18 +16,18 @@ Python 3 & Beautiful Soup for web scraping and sorting scraped data
 Possibly Svelte 3 for front-end
 
 #### TO DO
-* [Interveste](http://interveste.nl)
-* [Camelot](https://nl.cameloteurope.com)
 * [Gapph](https://gapph.nl/)
-* [Ad Hoc](https://www.adhocbeheer.nl/)
-* [Villex](https://www.villex.nl/)
-* [Rochdale](https://www.rochdale.nl/)
 * [Alvast](https://alvast.nl/)
 * [Prevenda](https://www.prevenda.eu/nl/)
 * [Zwerfkei](https://zwerfkeibeheer.nl/)
 * [OAK management](https://www.oakmanagement.nl/woonruimte/)
 * [Vastgoedbeschermer](https://vastgoedbeschermer.nl/)
 
+#### DOUBT
+* [Ad Hoc](https://www.adhocbeheer.nl/)
+* [Camelot](https://nl.cameloteurope.com)
+
 #### DONE
 * [Interveste](http://interveste.nl)
 * [VPS](https://vps-nl.com)
+* [Villex](https://www.villex.nl/)

@@ -10,8 +10,6 @@ for City in Data.Data["Antikraak"] :
     for key, value in City.items() :
         City[key] = util.getCleanString( value )
 
-print(Data.Data)
-
 # How do we want to receive our structured data?
 # We might want to render it in a webpage or email
 # this makes json an easy format.
