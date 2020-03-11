@@ -1,7 +1,13 @@
 import sys
 import scrapers
+import scrapedData
 
+Data = scrapedData.DataClass()
 scrapers.scrapeAll()
+Wormerveer = {
+    "Title": "Mooi huis in wormerveer"
+}
+Data.PushCity( Wormerveer )
 
 # How do we want to receive our structured data?
 # We might want to render it in a webpage or email
