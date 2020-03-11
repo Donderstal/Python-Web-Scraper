@@ -8,7 +8,12 @@ scrapers.scrapeAll( Data )
 
 for City in Data.Data["Antikraak"] :
     for key, value in City.items() :
-        City[key] = util.getCleanString( value )
+        if key is "url":
+            continue
+        else:
+            City[key] = util.getCleanString( value )
+    
+    print(Data.Data)
 
 # How do we want to receive our structured data?
 # We might want to render it in a webpage or email

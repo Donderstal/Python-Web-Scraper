@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 from urllib.request import urlopen
 
-corp = "Vastgoedbeschermer"
+corp = "Villex"
 
 def scrape( Data ) :
     Doc = BeautifulSoup( urlopen('https://vastgoedbeschermer.nl/ruimte/woonruimte/').read(), "html" )
@@ -12,20 +12,18 @@ def scrape( Data ) :
         ProductDoc = BeautifulSoup( urlopen(url).read(), "html" )
         typeOfContract = ProductDoc.find( "div", { "class": "container-if" }).find( "aside", { "id": "object-features" } ).find( "tr", {"class": "contract"} ).find("span").getText()
 
-        print( ProductDoc.find( "div", { "class": "container-if" }).find( "aside", { "id": "object-features" } ).find( "tr", {"class": "contract"} ).find("span").getText() )
-
         if "Bruikleen" in typeOfContract:
             pushVastgoedAd( htmlEl, "A", Data, url )
         else:
             pushVastgoedAd( htmlEl, "T", Data, url )
 
 def pushVastgoedAd( htmlEl, Type, Data, url ) :
-        ad  = {
-            "price"   : htmlEl.find("ul").find("span", {"class": "tooltip-title"}).getText(),
-            "url"     : url,
-            "corp"    : corp,
-            "city"    : htmlEl.find("h2").find("a").getText(),
-            "title"   : htmlEl.find("p", {"class": "lead-in"}).getText() + htmlEl.find("h2").find("a").getText()
-        }
+    ad  = {
+        "price"   : htmlEl.find("ul").find("span", {"class": "tooltip-title"}).getText(),
+        "url"     : url,
+        "corp"    : corp,
+        "city"    : htmlEl.find("h2").find("a").getText(),
+        "title"   : htmlEl.find("p", {"class": "lead-in"}).getText() + htmlEl.find("h2").find("a").getText()
+    }
 
-        Data.PushAd( ad, type )
+    Data.PushAd( ad, type )

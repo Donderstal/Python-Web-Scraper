@@ -28,9 +28,7 @@ def pushVillexAd( htmlEl, Type, Data ) :
         "url"     : "https://www.villex.nl" + htmlEl.find("div", {"class": "recent_objectbutton"}).find("a")["href"],
         "corp"    : corp,
         "city"    : adresDiv.find("div").getText(),
-        "title"   : adresDiv.find("strong").getText() + ", " + button.getText()
+        "title"   : adresDiv.find("strong").getText() + ", " + button.getText().strip()
     }
-
-    print( button.getText() )
 
     Data.PushAd( ad, type )

@@ -17,17 +17,17 @@ Possibly Svelte 3 for front-end
 
 #### TO DO
 * [Gapph](https://gapph.nl/)
-* [Alvast](https://alvast.nl/)
 * [Prevenda](https://www.prevenda.eu/nl/)
-* [Zwerfkei](https://zwerfkeibeheer.nl/)
 * [OAK management](https://www.oakmanagement.nl/woonruimte/)
-* [Vastgoedbeschermer](https://vastgoedbeschermer.nl/)
 
 #### DOUBT
+* [Zwerfkei](https://zwerfkeibeheer.nl/)
 * [Ad Hoc](https://www.adhocbeheer.nl/)
 * [Camelot](https://nl.cameloteurope.com)
 
 #### DONE
+* [Alvast](https://alvast.nl/)
 * [Interveste](http://interveste.nl)
-* [VPS](https://vps-nl.com)
 * [Villex](https://www.villex.nl/)
+* [Vastgoedbeschermer](https://vastgoedbeschermer.nl/)
+* [VPS](https://vps-nl.com)
